@@ -20,19 +20,19 @@
             <a-asset-item id="modelo2" src="grunty.glb" timeout="10000"></a-asset-item>
          
             <!-- Audios -->
-            <audio id="Caprice" src="intro.mp3" preload="auto"></audio>
-            <audio id="Alice" src="bruja.mp3" preload="auto"></audio>
+            <audio id="intro" src="intro.mp3" preload="auto"></audio>
+            <audio id="bruja" src="bruja.mp3" preload="auto"></audio>
         </a-assets>
 
         <!-- Marcadores con modelos y sonidos -->
         <a-marker type="barcode" value="31" raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
-            <a-entity gltf-model="#modelo" scale="4 3 3" rotation="90 0 270" class="clickable" gesture-handler 
+            <a-entity gltf-model="#modelo" scale=".05 .03 .03" rotation="90 0 270" class="clickable" gesture-handler 
                       sound="src: #intro; autoplay: false; volume: 1">
             </a-entity>
         </a-marker>
 
         <a-marker type="barcode" value="24" raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
-            <a-entity gltf-model="#modelo2" scale=".4 .3 .3" rotation="90 0 0" class="clickable" gesture-handler 
+            <a-entity gltf-model="#modelo2" scale="2 2 1" rotation="90 0 0" class="clickable" gesture-handler 
                       sound="src: #bruja; autoplay: false; volume: 1">
             </a-entity>
         </a-marker>
