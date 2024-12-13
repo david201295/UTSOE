@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>AR con A-Frame y AR.js</title>
+        <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+        <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+    </head>
+    <body style="margin: 0; overflow: hidden;">
+
+        <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;"> 
+
+
+        <a-marker type="pattern" url="pattern-marcador2.patt">
+            <a-box position="0 0.5 0" rotation="-57 -5 -4.5" radius-bottom="0.5" 
+            height="1"  material="
+            src: url(Bricks097_2K-JPG_Color.jpg);
+            roughnessMap: url(Bricks097_2K-JPG_Roughness.jpg);
+            normalMap: url(Bricks097_2K-JPG_NormalGL.jpg);
+            repeat: 0.5 0.5;"
+            scale="0.5 0.5 0.5">
+            </a-box>
+        </a-marker>	
+
+        <a-marker type="pattern" url="pattern-marcador3.patt">
+            <a-plane position="0 0.5 0" rotation="-57 -5 -4.5" radius-bottom="0.5" 
+            height="1"  material="
+            src: url(Grass001_1K-JPG_Color.jpg);
+            roughnessMap: url(Grass001_1K-JPG_Roughness.jpg);
+            normalMap: url(Grass001_1K-JPG_NormalGL.jpg);
+            repeat: 0.5 0.5;"
+            scale="0.5 0.5 0.5">
+            </a-plane>
+        </a-marker>	
+
+        <a-marker type="pattern" url="pattern-marcador4.patt">
+            <a-sphere position="0 0.5 0" rotation="-57 -5 -4.5" radius-bottom="0.5" 
+                height="1"  material="
+                src: url(Rock051_1K-JPG_Color.jpg);
+                roughnessMap: url(Rock051_1K-JPG_Roughness.jpg);
+                normalMap: url(Rock051_1K-JPG_NormalGL.jpg);
+                repeat: 0.5 0.5;"
+                scale="0.5 0.5 0.5">
+            </a-sphere>
+
+        </a-marker>	
+            <a-entity camera>
+            </a-entity> 
+        </a-scene>
+    </body>
+
+</html>
