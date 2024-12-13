@@ -14,12 +14,10 @@
             renderer="logarithmicDepthBuffer: true;" vr-mode-ui="enabled: false" gesture-detector id="scene">
           
             <a-assets>
-                <a-asset-item id="modelo" src="modelos/van_gogh_museum_-_self_portrait_1889.glb" timeout="10000"></a-asset-item>
-                <a-asset-item id="modelo2" src="modelos/van_gogh_museum_-_olive_grove.glb" timeout="10000"></a-asset-item>
-                <a-asset-item id="modelo3" src="modelos/psx_painting.glb" timeout="10000"></a-asset-item>
-                <a-asset-item id="modelo4" src="modelos/van_goghs_irises_in_art_nouveau_frame.glb" timeout="10000"></a-asset-item>
-            
-                <audio id="Caprice" src="audios/Caprice.mp3" preload="auto"></audio>
+                <a-asset-item id="modelo" src="banjo.glb" timeout="10000"></a-asset-item>
+                <a-asset-item id="modelo2" src="bruja.glb" timeout="10000"></a-asset-item>
+              
+                <audio id="intro" src="intro.mp3" preload="auto"></audio>
             </a-assets>
     
             <a-marker type="barcode" value="5" raycaster="objects: .clickable"
@@ -27,9 +25,9 @@
                 <a-entity
                     gltf-model="#modelo" scale="20 20 10" rotation= "51 -51 24" class="clickable"
                     gesture-handler
-                    sound="src: #Caprice; autoplay: false; volume: 1">
+                    sound="src: #intro; autoplay: false; volume: 1">
                 </a-entity>
-                <a-entity text="value: Batman;" position= "1 1 1"></a-entity>
+                <a-entity text="value: banjo;" position= "1 1 1"></a-entity>
             </a-marker>
     
             <a-marker type="barcode" value="10" raycaster="objects: .clickable"
@@ -40,31 +38,13 @@
                     sound="src: #audioSarcosuchus; autoplay: false; volume: 1">
                 </a-entity>
             </a-marker>
-
-            <a-marker type="barcode" value="10" raycaster="objects: .clickable"
-                emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
-                <a-entity
-                    gltf-model="#modelo3" scale="5 5 5" rotation= "51 -51 26" class="clickable"
-                    gesture-handler
-                    sound="src: #audioSarcosuchus; autoplay: false; volume: 1">
-                </a-entity>
-            </a-marker>
-
-            <a-marker type="barcode" value="10" raycaster="objects: .clickable"
-                emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
-                <a-entity
-                    gltf-model="#modelo4" scale="5 5 5" rotation= "51 -51 26" class="clickable"
-                    gesture-handler
-                    sound="src: #audioSarcosuchus; autoplay: false; volume: 1">
-                </a-entity>
-            </a-marker>
         
             <a-entity camera></a-entity>
         
         </a-scene>
 
 		<script>
-			var delfinAudio = document.getElementById('Caprice');
+			var delfinAudio = document.getElementById('intro');
 			var sarcosuchusAudio = document.getElementById('audioSarcosuchus');
 
 		   
